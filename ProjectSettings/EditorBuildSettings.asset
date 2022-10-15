@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Hayat_Folder/Hayat scene/start scene.unity
+    guid: b43e04f824a39484895e34933a573725
+  - enabled: 1
+    path: Assets/Avinash Folder/Avinash Scene/Avinash_mainScene.unity
+    guid: 4f8b32ac52e7c824a8b56eeb04baecfb
   m_configObjects: {}

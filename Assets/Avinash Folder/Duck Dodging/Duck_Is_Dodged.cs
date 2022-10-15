@@ -19,7 +19,7 @@ public class Duck_Is_Dodged : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RunEventWhenDuckOutOfBounds();
+       // RunEventWhenDuckOutOfBounds();
         EnableDebugMode();
     }
 

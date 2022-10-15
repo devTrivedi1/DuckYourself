@@ -11,7 +11,7 @@ public class TextTesting : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             count++;
-            score.DisplayText(count.ToString());
+           
         }
     }
 }

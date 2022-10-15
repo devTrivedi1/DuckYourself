@@ -13,10 +13,7 @@ public class DuckSpeed : MonoBehaviour
 		DuckMovement();
 	}
 
-	void Update()
-	{
-		Destroy(this.gameObject, 6f);
-	}
+
 
 	void DuckMovement()
 	{

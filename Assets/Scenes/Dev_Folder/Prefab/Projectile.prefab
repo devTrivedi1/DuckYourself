@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8810300261423782961}
   - component: {fileID: 1826856607790508626}
   - component: {fileID: 4227356035661135390}
+  - component: {fileID: 4894741486543257936}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Player
@@ -150,6 +151,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34593b0a2987bb4399c11a68a63b6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoSomethingWhenObjectIsDestroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6596355526562228370, guid: 6156d7146444a424589d01ce30adce60, type: 3}
+        m_TargetAssemblyTypeName: IncreaseDuckScore, Assembly-CSharp
+        m_MethodName: IncrementDuckScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DuckScore
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4227356035661135390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +190,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 1.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -189,4 +205,56 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4894741486543257936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893948588073994487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4d4cb869363164e8d761d5b50abae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToCollideTag: Dock
+  DoSomethingOnCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826856607790508626}
+        m_TargetAssemblyTypeName: DestroyCurrentObject, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1893948588073994484}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+        m_MethodName: set_angularVelocity
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1893948588073994484}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+        m_MethodName: set_freezeRotation
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
